@@ -1,24 +1,23 @@
 <template>
   <v-app>
+    <Navbar />
     <v-content>
       <router-view></router-view>
     </v-content>
+    <Footer />
   </v-app>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-// import HelloWorld from './components/HelloWorld.vue'
+<script>
+import { Component, Vue } from "vue-property-decorator";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-export default Vue.extend({
-  name: 'App',
-
+@Component({
   components: {
-    // HelloWorld
-  },
-
-  data: () => ({
-    //
-  })
+    Navbar,
+    Footer
+  }
 })
+export default class App extends Vue {}
 </script>
