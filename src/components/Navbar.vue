@@ -20,7 +20,7 @@
         <span class="subheading">D&D</span>
       </v-toolbar-title>
       <v-list dense>
-        <v-list-item :to="link.route" link v-for="link in links" :key="link.text">
+        <v-list-item :to="{ name: link.route }" link v-for="link in links" :key="link.text">
           <v-list-item-icon
             ><v-icon>{{ link.icon }}</v-icon></v-list-item-icon
           >
@@ -39,7 +39,7 @@ export default class Navbar extends Vue {
   drawer = false;
   links = [
     { icon: "", text: "Главная", route: "/" },
-    { icon: "", text: "Мероприятия", route: "events" }
+    { icon: "", text: "Мероприятия", route: "/events" }
     // { icon: "", text: "Сообщество", route: "/forum" },
     // { icon: "", text: "Материалы", route: "/guides" }
   ];

@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: () => import("../views/Home.vue")
   },
   {
@@ -28,6 +28,11 @@ const routes: Array<RouteConfig> = [
     path: "/game/:id",
     name: "game",
     component: () => import("../views/GamePage.vue")
+  },
+  {
+    path: "/create-game",
+    name: "create-game",
+    component: () => import("../views/CreateGamePage.vue")
   }
 ];
 
